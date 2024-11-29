@@ -8,7 +8,7 @@ n_pts          = 4
 n_sampling_pts = 50
 plot_pts       = True
 mesh_domain    = False
-magnify        = 1.0
+magnify        = 2.0
 domain_h       = 0.2
 xmin           =-2.0
 xmax           = 5.0
@@ -17,7 +17,7 @@ ymax           = 2.0
 
 # To generate shapes with homogeneous curvatures
 radius         = [0.5]
-edgy           = [1.0]
+edgy           = [0.0]
 
 # To generate shapes with random curvatures
 #radius         = np.random.uniform(low=0.0, high=1.0, size=n_pts)
