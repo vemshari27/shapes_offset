@@ -1,7 +1,8 @@
 # Generic imports
 import os
 import os.path
-import PIL
+# import PIL
+from PIL import Image, ImageChops
 import math
 import scipy.special
 import matplotlib
@@ -603,9 +604,9 @@ def generate_bezier_curve(p1,       p2,
 ### Crop white background from image
 def trim_white(filename):
 
-    im   = PIL.Image.open(filename)
-    bg   = PIL.Image.new(im.mode, im.size, (255,255,255))
-    diff = PIL.ImageChops.difference(im, bg)
+    im   = Image.open(filename)
+    bg   = Image.new(im.mode, im.size, (255,255,255))
+    diff = ImageChops.difference(im, bg)
     bbox = diff.getbbox()
     cp   = im.crop(bbox)
     cp.save(filename)

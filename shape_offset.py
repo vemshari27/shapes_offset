@@ -30,7 +30,7 @@ if (not os.path.isfile(filename)):
 shape = Shape()
 shape.read_csv(filename)
 shape.generate(ccws=True,
-               centering=True)
+               centering=True, magnify=5)
 
 
 points = shape.curve_pts[:,:-1]
